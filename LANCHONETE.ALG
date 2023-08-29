@@ -9,13 +9,14 @@ NLANCHES,NACOMPAN,NBEB: VETOR[1..7] DE CARACTER
 VLLANCHES,VLACOMPAN,VLBEB,TVENDA:VETOR[1..7] DE REAL
 QNTLANCHES,QNTACOMPAN,QNTBEB: VETOR [1..7] DE INTEIRO
 VLMPRINCIPAL,VLMLANCHE,VLMACOMPAN,VLMBEB,QNTACOM,QNTLANCHE,QNTBEBI,K,X,Y,Z,W,SN:INTEIRO
-TX,TY,TZ,VERIFICA:INTEIRO
+TX,TY,TZ,I,VERIFICA,COMPARA:INTEIRO
 NMLANCHE,NMACOMPAN,NMBEBI:CARACTER
 VLLANCHE,VLACOM,VLBEBI,TLANCHE,TACOMPAN,TBEB,TOTAL,MEDIA:REAL
 
 
 Inicio
 VLMPRINCIPAL <- 1
+
 
 ENQUANTO (VLMPRINCIPAL <> 0) FACA
   ESCREVAL("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
@@ -56,6 +57,7 @@ ENQUANTO (VLMPRINCIPAL <> 0) FACA
   FIMSE
   ESCOLHA VLMPRINCIPAL
    CASO 1
+   COMPARA <- 0
    SE X = 0 ENTAO
     ENQUANTO (VLMLANCHE <> 0) FACA
      ESCREVAL("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
@@ -82,64 +84,127 @@ ENQUANTO (VLMPRINCIPAL <> 0) FACA
         ESCREVA("DIGITE A QUANTIDADE: ")
         LEIA(QNTLANCHE)
         VLLANCHE <- 20.00 * QNTLANCHE
-        X <- X+1
-        NLANCHES[X]<- NMLANCHE
-        QNTLANCHES[X]<- QNTLANCHE
-        VLLANCHES[X]<- VLLANCHE
+        PARA I DE 1 ATE 7 FACA
+         SE NLANCHES[I] = NMLANCHE ENTAO
+          QNTLANCHES[I] <- QNTLANCHES[I] + QNTLANCHE
+          VLLANCHES[I] <- VLLANCHES[I] + VLLANCHE
+          COMPARA <- 1
+         FIMSE
+        FIMPARA
+        SE COMPARA = 0 ENTAO
+          X <- X+1
+          NLANCHES[X]<- NMLANCHE
+          QNTLANCHES[X]<- QNTLANCHE
+          VLLANCHES[X]<- VLLANCHE
+        FIMSE
        CASO 2
         NMLANCHE <- "PIZZA MODA DA CASA"
         ESCREVA("DIGITE A QUANTIDADE: ")
         LEIA(QNTLANCHE)
         VLLANCHE <- 60.00 * QNTLANCHE
-        X <- X+1
-        NLANCHES[X]<- NMLANCHE
-        QNTLANCHES[X]<- QNTLANCHE
-        VLLANCHES[X]<- VLLANCHE
+        PARA I DE 1 ATE 7 FACA
+         SE NLANCHES[I] = NMLANCHE ENTAO
+          QNTLANCHES[I] <- QNTLANCHES[I] + QNTLANCHE
+          VLLANCHES[I] <- VLLANCHES[I] + VLLANCHE
+          COMPARA <- 1
+         FIMSE
+        FIMPARA
+        SE COMPARA = 0 ENTAO
+          X <- X+1
+          NLANCHES[X]<- NMLANCHE
+          QNTLANCHES[X]<- QNTLANCHE
+          VLLANCHES[X]<- VLLANCHE
+        FIMSE
        CASO 3
         NMLANCHE <- "HOT DOG"
         ESCREVA("DIGITE A QUANTIDADE: ")
         LEIA(QNTLANCHE)
         VLLANCHE <- 18.50 * QNTLANCHE
-        X <- X+1
-        NLANCHES[X]<- NMLANCHE
-        QNTLANCHES[X]<- QNTLANCHE
-        VLLANCHES[X]<- VLLANCHE
+        PARA I DE 1 ATE 7 FACA
+         SE NLANCHES[I] = NMLANCHE ENTAO
+          QNTLANCHES[I] <- QNTLANCHES[I] + QNTLANCHE
+          VLLANCHES[I] <- VLLANCHES[I] + VLLANCHE
+          COMPARA <- 1
+         FIMSE
+        FIMPARA
+        SE COMPARA = 0 ENTAO
+          X <- X+1
+          NLANCHES[X]<- NMLANCHE
+          QNTLANCHES[X]<- QNTLANCHE
+          VLLANCHES[X]<- VLLANCHE
+        FIMSE
        CASO 4
         NMLANCHE <- "MISTO QUENTE"
         ESCREVA("DIGITE A QUANTIDADE: ")
         LEIA(QNTLANCHE)
         VLLANCHE <- 7.25 * QNTLANCHE
-        X <- X+1
-        NLANCHES[X]<- NMLANCHE
-        QNTLANCHES[X]<- QNTLANCHE
-        VLLANCHES[X]<- VLLANCHE
+        PARA I DE 1 ATE 7 FACA
+         SE NLANCHES[I] = NMLANCHE ENTAO
+          QNTLANCHES[I] <- QNTLANCHES[I] + QNTLANCHE
+          VLLANCHES[I] <- VLLANCHES[I] + VLLANCHE
+          COMPARA <- 1
+         FIMSE
+        FIMPARA
+        SE COMPARA = 0 ENTAO
+          X <- X+1
+          NLANCHES[X]<- NMLANCHE
+          QNTLANCHES[X]<- QNTLANCHE
+          VLLANCHES[X]<- VLLANCHE
+        FIMSE
        CASO 5
         NMLANCHE <- "X-SALADA"
         ESCREVA("DIGITE A QUANTIDADE: ")
         LEIA(QNTLANCHE)
         VLLANCHE <- 15.00 * QNTLANCHE
-        X <- X+1
-        NLANCHES[X]<- NMLANCHE
-        QNTLANCHES[X]<- QNTLANCHE
-        VLLANCHES[X]<- VLLANCHE
+        PARA I DE 1 ATE 7 FACA
+         SE NLANCHES[I] = NMLANCHE ENTAO
+          QNTLANCHES[I] <- QNTLANCHES[I] + QNTLANCHE
+          VLLANCHES[I] <- VLLANCHES[I] + VLLANCHE
+          COMPARA <- 1
+         FIMSE
+        FIMPARA
+        SE COMPARA = 0 ENTAO
+          X <- X+1
+          NLANCHES[X]<- NMLANCHE
+          QNTLANCHES[X]<- QNTLANCHE
+          VLLANCHES[X]<- VLLANCHE
+        FIMSE
        CASO 6
         NMLANCHE <- "CALDO DE FRANGO"
         ESCREVA("DIGITE A QUANTIDADE: ")
         LEIA(QNTLANCHE)
         VLLANCHE <- 22.00 * QNTLANCHE
-        X <- X+1
-        NLANCHES[X]<- NMLANCHE
-        QNTLANCHES[X]<- QNTLANCHE
-        VLLANCHES[X]<- VLLANCHE
+        PARA I DE 1 ATE 7 FACA
+         SE NLANCHES[I] = NMLANCHE ENTAO
+          QNTLANCHES[I] <- QNTLANCHES[I] + QNTLANCHE
+          VLLANCHES[I] <- VLLANCHES[I] + VLLANCHE
+          COMPARA <- 1
+         FIMSE
+        FIMPARA
+        SE COMPARA = 0 ENTAO
+          X <- X+1
+          NLANCHES[X]<- NMLANCHE
+          QNTLANCHES[X]<- QNTLANCHE
+          VLLANCHES[X]<- VLLANCHE
+        FIMSE
        CASO 7
         NMLANCHE <- "PEIXE FRITO"
         ESCREVA("DIGITE A QUANTIDADE: ")
         LEIA(QNTLANCHE)
         VLLANCHE <- 45.00 * QNTLANCHE
-        X <- X+1
-        NLANCHES[X]<- NMLANCHE
-        QNTLANCHES[X]<- QNTLANCHE
-        VLLANCHES[X]<- VLLANCHE
+        PARA I DE 1 ATE 7 FACA
+         SE NLANCHES[I] = NMLANCHE ENTAO
+          QNTLANCHES[I] <- QNTLANCHES[I] + QNTLANCHE
+          VLLANCHES[I] <- VLLANCHES[I] + VLLANCHE
+          COMPARA <- 1
+         FIMSE
+        FIMPARA
+        SE COMPARA = 0 ENTAO
+          X <- X+1
+          NLANCHES[X]<- NMLANCHE
+          QNTLANCHES[X]<- QNTLANCHE
+          VLLANCHES[X]<- VLLANCHE
+        FIMSE
       FIMESCOLHA
      SENAO
       ESCREVAL("ESCOLHA UMA OPCAO VALIDA!")
@@ -184,6 +249,7 @@ ENQUANTO (VLMPRINCIPAL <> 0) FACA
       ESCREVAL("FINALIZE O PEDIDO COM AS OPCOES 2 E 3 OU FINALIZANDO A COMPRA")
  FIMSE
    CASO 2
+    COMPARA <- 0
     SE Y = 0 ENTAO
      ENQUANTO (VLMACOMPAN <> 0) FACA
       ESCREVAL("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
@@ -210,64 +276,127 @@ ENQUANTO (VLMPRINCIPAL <> 0) FACA
           ESCREVAL("DIGITE A QUANTIDADE: ")
           LEIA(QNTACOM)
           VLACOM <- 8.75 * QNTACOM
-          Y <- Y +1
-          NACOMPAN[Y] <- NMACOMPAN
-          VLACOMPAN[Y] <- VLACOM
-          QNTACOMPAN[Y] <- QNTACOM
+           PARA I DE 1 ATE 7 FACA
+            SE NACOMPAN[I] = NMACOMPAN ENTAO
+             QNTACOMPAN[I] <- QNTACOMPAN[I] + QNTACOM
+             VLACOMPAN[I] <- VLACOMPAN[I] + VLACOM
+             COMPARA <- 1
+            FIMSE
+           FIMPARA
+           SE COMPARA = 0 ENTAO
+             Y <- Y +1
+             NACOMPAN[Y] <- NMACOMPAN
+             VLACOMPAN[Y] <- VLACOM
+             QNTACOMPAN[Y] <- QNTACOM
+           FIMSE
         CASO 2
           NMACOMPAN <- "CEBOLA CRISP"
           ESCREVAL("DIGITE A QUANTIDADE: ")
           LEIA(QNTACOM)
           VLACOM <- 10.00 * QNTACOM
-          Y <- Y +1
-          NACOMPAN[Y] <- NMACOMPAN
-          VLACOMPAN[Y] <- VLACOM
-          QNTACOMPAN[Y] <- QNTACOM
+          PARA I DE 1 ATE 7 FACA
+            SE NACOMPAN[I] = NMACOMPAN ENTAO
+             QNTACOMPAN[I] <- QNTACOMPAN[I] + QNTACOM
+             VLACOMPAN[I] <- VLACOMPAN[I] + VLACOM
+             COMPARA <- 1
+            FIMSE
+           FIMPARA
+           SE COMPARA = 0 ENTAO
+             Y <- Y +1
+             NACOMPAN[Y] <- NMACOMPAN
+             VLACOMPAN[Y] <- VLACOM
+             QNTACOMPAN[Y] <- QNTACOM
+           FIMSE
         CASO 3
           NMACOMPAN <- "SALADA"
           ESCREVAL("DIGITE A QUANTIDADE: ")
           LEIA(QNTACOM)
           VLACOM <- 5.00 * QNTACOM
-          Y <- Y +1
-          NACOMPAN[Y] <- NMACOMPAN
-          VLACOMPAN[Y] <- VLACOM
-          QNTACOMPAN[Y] <- QNTACOM
+           PARA I DE 1 ATE 7 FACA
+            SE NACOMPAN[I] = NMACOMPAN ENTAO
+             QNTACOMPAN[I] <- QNTACOMPAN[I] + QNTACOM
+             VLACOMPAN[I] <- VLACOMPAN[I] + VLACOM
+             COMPARA <- 1
+            FIMSE
+           FIMPARA
+           SE COMPARA = 0 ENTAO
+             Y <- Y +1
+             NACOMPAN[Y] <- NMACOMPAN
+             VLACOMPAN[Y] <- VLACOM
+             QNTACOMPAN[Y] <- QNTACOM
+           FIMSE
         CASO 4
           NMACOMPAN <- "SORVETE"
           ESCREVAL("DIGITE A QUANTIDADE: ")
           LEIA(QNTACOM)
           VLACOM <- 7.00 * QNTACOM
-          Y <- Y +1
-          NACOMPAN[Y] <- NMACOMPAN
-          VLACOMPAN[Y] <- VLACOM
-          QNTACOMPAN[Y] <- QNTACOM
+           PARA I DE 1 ATE 7 FACA
+            SE NACOMPAN[I] = NMACOMPAN ENTAO
+             QNTACOMPAN[I] <- QNTACOMPAN[I] + QNTACOM
+             VLACOMPAN[I] <- VLACOMPAN[I] + VLACOM
+             COMPARA <- 1
+            FIMSE
+           FIMPARA
+           SE COMPARA = 0 ENTAO
+             Y <- Y +1
+             NACOMPAN[Y] <- NMACOMPAN
+             VLACOMPAN[Y] <- VLACOM
+             QNTACOMPAN[Y] <- QNTACOM
+           FIMSE
         CASO 5
           NMACOMPAN <- "TORRADA"
           ESCREVAL("DIGITE A QUANTIDADE: ")
           LEIA(QNTACOM)
           VLACOM <- 2.35 * QNTACOM
-          Y <- Y +1
-          NACOMPAN[Y] <- NMACOMPAN
-          VLACOMPAN[Y] <- VLACOM
-          QNTACOMPAN[Y] <- QNTACOM
+           PARA I DE 1 ATE 7 FACA
+            SE NACOMPAN[I] = NMACOMPAN ENTAO
+             QNTACOMPAN[I] <- QNTACOMPAN[I] + QNTACOM
+             VLACOMPAN[I] <- VLACOMPAN[I] + VLACOM
+             COMPARA <- 1
+            FIMSE
+           FIMPARA
+           SE COMPARA = 0 ENTAO
+             Y <- Y +1
+             NACOMPAN[Y] <- NMACOMPAN
+             VLACOMPAN[Y] <- VLACOM
+             QNTACOMPAN[Y] <- QNTACOM
+           FIMSE
         CASO 6
           NMACOMPAN <- "PORCAO DE ARROZ"
           ESCREVAL("DIGITE A QUANTIDADE: ")
           LEIA(QNTACOM)
           VLACOM <- 4.75 * QNTACOM
-          Y <- Y +1
-          NACOMPAN[Y] <- NMACOMPAN
-          VLACOMPAN[Y] <- VLACOM
-          QNTACOMPAN[Y] <- QNTACOM
+          PARA I DE 1 ATE 7 FACA
+            SE NACOMPAN[I] = NMACOMPAN ENTAO
+             QNTACOMPAN[I] <- QNTACOMPAN[I] + QNTACOM
+             VLACOMPAN[I] <- VLACOMPAN[I] + VLACOM
+             COMPARA <- 1
+            FIMSE
+           FIMPARA
+           SE COMPARA = 0 ENTAO
+             Y <- Y +1
+             NACOMPAN[Y] <- NMACOMPAN
+             VLACOMPAN[Y] <- VLACOM
+             QNTACOMPAN[Y] <- QNTACOM
+           FIMSE
         CASO 7
           NMACOMPAN <- "MINI PIZZA DOCE"
           ESCREVAL("DIGITE A QUANTIDADE: ")
           LEIA(QNTACOM)
           VLACOM <- 19.00 * QNTACOM
-          Y<-Y + 1
-          NACOMPAN[Y] <- NMACOMPAN
-          VLACOMPAN[Y] <- VLACOM
-          QNTACOMPAN[Y] <- QNTACOM
+           PARA I DE 1 ATE 7 FACA
+            SE NACOMPAN[I] = NMACOMPAN ENTAO
+             QNTACOMPAN[I] <- QNTACOMPAN[I] + QNTACOM
+             VLACOMPAN[I] <- VLACOMPAN[I] + VLACOM
+             COMPARA <- 1
+            FIMSE
+           FIMPARA
+           SE COMPARA = 0 ENTAO
+             Y <- Y +1
+             NACOMPAN[Y] <- NMACOMPAN
+             VLACOMPAN[Y] <- VLACOM
+             QNTACOMPAN[Y] <- QNTACOM
+           FIMSE
        FIMESCOLHA
       SENAO
        ESCREVAL("DIGITE UMA OPCAO VALIDA")
@@ -312,6 +441,7 @@ ENQUANTO (VLMPRINCIPAL <> 0) FACA
        ESCREVAL("FACA NOVOS PEDIDOS OU FINALIZE A VENDA")
    FIMSE
    CASO 3
+   COMPARA <- 0
     SE Z = 0 ENTAO
      ENQUANTO (VLMBEB <> 0) FACA
       ESCREVAL("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
@@ -338,64 +468,127 @@ ENQUANTO (VLMPRINCIPAL <> 0) FACA
          ESCREVA("DIGITE A QUANTIDADE: ")
          LEIA(QNTBEBI)
          VLBEBI <- 3,00 * QNTBEBI
-         Z<-Z + 1
-         NBEB[Z] <- NMBEBI
-         VLBEB[Z] <- VLBEBI
-         QNTBEB[Z] <- QNTBEBI
+         PARA I DE 1 ATE 7 FACA
+          SE NBEB[I]=NMBEBI ENTAO
+           VLBEB[I] <- VLBEB[I] + VLBEBI
+           QNTBEB[I] <- QNTBEB[I] +QNTBEBI
+           COMPARA <-1
+          FIMSE
+         FIMPARA
+         SE COMPARA = 0 ENTAO
+           Z<-Z + 1
+           NBEB[Z] <- NMBEBI
+           VLBEB[Z] <- VLBEBI
+           QNTBEB[Z] <- QNTBEBI
+         FIMSE
         CASO 2
          NMBEBI <- "AGUA COM GAS"
          ESCREVA("DIGITE A QUANTIDADE: ")
          LEIA(QNTBEBI)
          VLBEBI <- 3.00 * QNTBEBI
-         Z<-Z + 1
-         NBEB[Z] <- NMBEBI
-         VLBEB[Z] <- VLBEBI
-         QNTBEB[Z] <- QNTBEBI
+          PARA I DE 1 ATE 7 FACA
+          SE NBEB[I]=NMBEBI ENTAO
+           VLBEB[I] <- VLBEB[I] + VLBEBI
+           QNTBEB[I] <- QNTBEB[I] +QNTBEBI
+           COMPARA <-1
+          FIMSE
+         FIMPARA
+         SE COMPARA = 0 ENTAO
+           Z<-Z + 1
+           NBEB[Z] <- NMBEBI
+           VLBEB[Z] <- VLBEBI
+           QNTBEB[Z] <- QNTBEBI
+         FIMSE
         CASO 3
          NMBEBI <- "COCA-COLA LATA"
          ESCREVA("DIGITE A QUANTIDADE: ")
          LEIA(QNTBEBI)
          VLBEBI <- 4.50 * QNTBEBI
-         Z<-Z + 1
-         NBEB[Z] <- NMBEBI
-         VLBEB[Z] <- VLBEBI
-         QNTBEB[Z] <- QNTBEBI
+          PARA I DE 1 ATE 7 FACA
+          SE NBEB[I]=NMBEBI ENTAO
+           VLBEB[I] <- VLBEB[I] + VLBEBI
+           QNTBEB[I] <- QNTBEB[I] +QNTBEBI
+           COMPARA <-1
+          FIMSE
+         FIMPARA
+         SE COMPARA = 0 ENTAO
+           Z<-Z + 1
+           NBEB[Z] <- NMBEBI
+           VLBEB[Z] <- VLBEBI
+           QNTBEB[Z] <- QNTBEBI
+         FIMSE
         CASO 4
          NMBEBI <- "FANTA LATA"
          ESCREVA("DIGITE A QUANTIDADE: ")
          LEIA(QNTBEBI)
          VLBEBI <- 4.00 * QNTBEBI
-         Z<-Z + 1
-         NBEB[Z] <- NMBEBI
-         VLBEB[Z] <- VLBEBI
-         QNTBEB[Z] <- QNTBEBI
+          PARA I DE 1 ATE 7 FACA
+          SE NBEB[I]=NMBEBI ENTAO
+           VLBEB[I] <- VLBEB[I] + VLBEBI
+           QNTBEB[I] <- QNTBEB[I] +QNTBEBI
+           COMPARA <-1
+          FIMSE
+         FIMPARA
+         SE COMPARA = 0 ENTAO
+           Z<-Z + 1
+           NBEB[Z] <- NMBEBI
+           VLBEB[Z] <- VLBEBI
+           QNTBEB[Z] <- QNTBEBI
+         FIMSE
         CASO 5
          NMBEBI <- "SUCOS"
          ESCREVA("DIGITE A QUANTIDADE: ")
          LEIA(QNTBEBI)
          VLBEBI <- 8.00 * QNTBEBI
-         Z<-Z + 1
-         NBEB[Z] <- NMBEBI
-         VLBEB[Z] <- VLBEBI
-         QNTBEB[Z] <- QNTBEBI
+          PARA I DE 1 ATE 7 FACA
+          SE NBEB[I]=NMBEBI ENTAO
+           VLBEB[I] <- VLBEB[I] + VLBEBI
+           QNTBEB[I] <- QNTBEB[I] +QNTBEBI
+           COMPARA <-1
+          FIMSE
+         FIMPARA
+         SE COMPARA = 0 ENTAO
+           Z<-Z + 1
+           NBEB[Z] <- NMBEBI
+           VLBEB[Z] <- VLBEBI
+           QNTBEB[Z] <- QNTBEBI
+         FIMSE
         CASO 6
          NMBEBI <- "AGUA DE COCO"
          ESCREVA("DIGITE A QUANTIDADE: ")
          LEIA(QNTBEBI)
          VLBEBI <- 5.00 * QNTBEBI
-         Z<-Z + 1
-         NBEB[Z] <- NMBEBI
-         VLBEB[Z] <- VLBEBI
-         QNTBEB[Z] <- QNTBEBI
+          PARA I DE 1 ATE 7 FACA
+          SE NBEB[I]=NMBEBI ENTAO
+           VLBEB[I] <- VLBEB[I] + VLBEBI
+           QNTBEB[I] <- QNTBEB[I] +QNTBEBI
+           COMPARA <-1
+          FIMSE
+         FIMPARA
+         SE COMPARA = 0 ENTAO
+           Z<-Z + 1
+           NBEB[Z] <- NMBEBI
+           VLBEB[Z] <- VLBEBI
+           QNTBEB[Z] <- QNTBEBI
+         FIMSE
         CASO 7
-         NMBEBI <- "ACAFE"
+         NMBEBI <- "CAFE"
          ESCREVA("DIGITE A QUANTIDADE: ")
          LEIA(QNTBEBI)
          VLBEBI <- 2.50 * QNTBEBI
-         Z<-Z + 1
-         NBEB[Z] <- NMBEBI
-         VLBEB[Z] <- VLBEBI
-         QNTBEB[Z] <- QNTBEBI
+          PARA I DE 1 ATE 7 FACA
+          SE NBEB[I]=NMBEBI ENTAO
+           VLBEB[I] <- VLBEB[I] + VLBEBI
+           QNTBEB[I] <- QNTBEB[I] +QNTBEBI
+           COMPARA <-1
+          FIMSE
+         FIMPARA
+         SE COMPARA = 0 ENTAO
+           Z<-Z + 1
+           NBEB[Z] <- NMBEBI
+           VLBEB[Z] <- VLBEBI
+           QNTBEB[Z] <- QNTBEBI
+         FIMSE
        FIMESCOLHA
       SENAO
        ESCREVAL("DIGITE UMA OPCAO VALIDA")
