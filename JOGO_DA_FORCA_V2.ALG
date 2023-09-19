@@ -4,14 +4,37 @@ Algoritmo "Jogo_da_Forca"
 // Descrição   : Aqui você descreve o que o programa faz! (função)
 // Autor(a)    : Douglas
 // Data atual  : 12/06/2023
+
 Var
-   opcaoinicio,erros,acertos,tamanhopalavra,i,cont,opcao:inteiro
-   palavra,letraspalavra,letrasdigitadas,corpo:vetor[1..20] de caractere
-   palavrasecreta,letra:caracter
+   opcaoinicio,erros,acertos,tamanhopalavra,i,cont,opcao,x:inteiro
+   palavra,letraspalavra,letrasdigitadas,corpo,plvrand,dica:vetor[1..20] de caractere
+   palavrasecreta,letra,plvescolhida,fraseescolhida:caracter
 
 
 
 Inicio
+   plvrand[1]<-"PAPAGAIO"
+   plvrand[2]<-"LIQUIDIFICADOR"
+   plvrand[3]<-"FEIJOADA"
+   plvrand[4]<-"SMARTPHONE"
+   plvrand[5]<-"SATURNO"
+   plvrand[6]<-"VIOLA CAIPIRA"
+   plvrand[7]<-"DEZEMBRO"
+   plvrand[8]<-"ALGORITMO"
+   plvrand[9]<-"MG"
+   plvrand[10]<-"UNIUBE"
+   
+   dica[1]<-" Especie de passaro"
+   dica[2]<-" Aparelho eletrico geralmente usado na cozinha "
+   dica[3]<-" Prato típico popular da culinária brasileira"
+   dica[4]<-" Aparelho eletronico mais usado nos ultimos tempos"
+   dica[5]<-" Nome de um planeta"
+   dica[6]<-" Instrumento Musical"
+   dica[7]<-" Nome de um Mes "
+   dica[8]<-" E uma sequência de instruções para alcançar um objetivo"
+   dica[9]<-" Sigla de um estado"
+   dica[10]<-"Universidade de Verdade"
+   
    corpo[1]<-"( )"
    corpo[2]<-"|"
    corpo[3]<-"/|"
@@ -22,18 +45,25 @@ Inicio
    opcao<-1
 
 
+
       escreval("*****************************************************")
       escreval("*                   JOGO DA FORCA                   *")
       escreval("*****************************************************")
       escreval("*                                                   *")
       escreval("*                     1-Inicio                      *")
       escreval("*                     0-Sair                        *")
+      escreval("*                                                   *")
+      escreval("* Obs: Pode haver palavras compostas ou separadas   *")
+      escreval("*      por espaco nao esqueca de digitar            *")
       escreval("*****************************************************")
       escreva ("*Digite uma opção: ")
       leia(opcaoinicio)
  enquanto opcao = opcaoinicio faca
  erros<-0
  acertos<-0
+  x<-randi(10)+1
+   plvescolhida<- plvrand[x]
+   fraseescolhida<- dica[x]
   para i<-1 ate 20 faca
      letrasdigitadas[i]<-" "
   fimpara
@@ -42,8 +72,10 @@ Inicio
          escreval("*****************************************************")
          escreval("*                   JOGO DA FORCA                   *")
          escreval("*****************************************************")
-         escreva ("*Escreva a Palavra Secreta: ")
-         leia(palavrasecreta)
+         //escreva ("*Escreva a Palavra Secreta: ")
+         escreval ("* Dica: ",fraseescolhida)
+         //leia(palavrasecreta)
+         palavrasecreta <- plvescolhida
          escreval("*_______________                                   *")
          escreval("*||            |                                   *")
          escreval("*||                                                *")
@@ -88,6 +120,7 @@ Inicio
                escreva ("*letras : ",letrasdigitadas[i])
                escreval(" ")
                escreval("*****************************************************")
+               escreval("* Dica: ",fraseescolhida)
                escreval("*_______________                                    *")
                escreval("*||            |                                    *")
                cont<-0
@@ -127,7 +160,7 @@ Inicio
                               escreval("*||+++++++++++++++++VOCÊ MORREU+++++++++++++++++++++*")
                               escreval("*||           ",corpo[4], "                                   *")
 
-                              escreval("*||           ",corpo[6 ], "        A Palavra era: ",palavrasecreta, "         *")
+                              escreval("*||           ",corpo[6 ], "        A Palavra era: ",plvescolhida, "         *")
 
 
                            fimse
@@ -151,6 +184,7 @@ Inicio
                   escreva(palavra[i]," ")
                fimse
             fimpara
+            leia (palavrasecreta)
             escreval(" ")
             escreval("*****************************************************")
 

@@ -1,12 +1,16 @@
 Algoritmo "semnome"
 // Disciplina  :  [Linguagem e Lógica de Programação] 
-// Professor   : Antonio Carlos Nicolodi 
-// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Professor   : Paulo Limirio
+// Descrição   : Programa proposto pela UNIUBE que tem o objetivo de
+//efetuar um sistema de lanchonete que simule vendas de lanches acompanhamentos
+//e bebidas totalizando cada venda e ao final do dia fazer uma relatorios
+//das vendas efetuadas .
 // Autor(a)    : Douglas de Abreu Bernardes
 // Data atual  : 8/19/2023
 Var
 NLANCHES,NACOMPAN,NBEB: VETOR[1..7] DE CARACTER
-VLLANCHES,VLACOMPAN,VLBEB,TVENDA:VETOR[1..7] DE REAL
+VLLANCHES,VLACOMPAN,VLBEB:VETOR[1..7] DE REAL
+TVENDA:VETOR[1..100] DE REAL
 QNTLANCHES,QNTACOMPAN,QNTBEB: VETOR [1..7] DE INTEIRO
 VLMPRINCIPAL,VLMLANCHE,VLMACOMPAN,VLMBEB,QNTACOM,QNTLANCHE,QNTBEBI,K,X,Y,Z,W,SN:INTEIRO
 TX,TY,TZ,I,VERIFICA,COMPARA:INTEIRO
