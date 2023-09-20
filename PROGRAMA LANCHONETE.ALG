@@ -45,7 +45,7 @@ Var
    VLLANCHES:vetor[1..7]de real
    VLACOMPAN:vetor[1..7]de real
    VLBEB:vetor[1..7]de real
-   tvenda:vetor[1..7]de real
+   tvenda:vetor[1..200]de real
 
 procedimento menuinicial
 inicio
@@ -256,7 +256,7 @@ Inicio
                   NMLANCHE <- "PIZZA MODA DA CASA"
                   ESCREVA("DIGITE A QUANTIDADE: ")
                   LEIA(QNTLANCHE)
-                  VLLANCHE <- 60.00 * QNTLANCHE
+                          VLLANCHE <- 60.00 * QNTLANCHE
                   PARA I DE 1 ATE 7 FACA
                      SE NLANCHES[I] = NMLANCHE ENTAO
                         QNTLANCHES[I] <- QNTLANCHES[I] + QNTLANCHE
@@ -776,6 +776,17 @@ Inicio
             LEIA(SN)
          FIMSE
       caso 4
+            LIMPATELA
+    ESCREVAL("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+    ESCREVAL("@                                                               @")
+    ESCREVAL("@   DEJESA FINALIZAR A COMPRA?                                  @")
+    ESCREVAL("@                                                               @")
+    ESCREVAL("@  1 - TOTALIZAR COMPRA                                         @")
+    ESCREVAL("@  2 - CANCELAR COMPRA                                          @")
+    ESCREVAL("@                                                               @")
+    ESCREVAL("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+    ESCREVA("@ VOCE ESCOLHEU A OPCAO: ")
+          LEIA (SN)
          SE SN = 1 ENTAO
             LIMPATELA
             PARA X DE 1 ATE 7 FACA
